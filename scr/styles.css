@@ -1,0 +1,161 @@
+:root {
+    --bg-main: #000000;
+    --bg-panel: #161616;
+    --bg-card-muted: #212121;
+    --bg-card-muted-hover: #242424;
+    --bg-card-active: #1d2238;
+    --bg-card-active-hover: #293254;
+    
+    --text-main: #f0f3f8;
+    --text-muted: #8a94a6;
+    --accent-green: #00e699;
+    --accent-blue: #00b8ff;
+    --accent-red: #b8170f;
+    
+    --border-subtle: #434343;
+    --radius: 12px;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+
+    font-family: sans-serif;
+
+    box-sizing: border-box;
+    color: var(--text-main);
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--bg-main);
+}
+
+.app-layout {
+    height: 100vh;
+
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 16px;
+    padding: 16px;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+
+    background-color: var(--bg-panel);
+
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+}
+
+/* -------------------------------------------------------- */
+.main-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resourse-counter {
+    text-align: center;
+}
+
+.resourse-counter .value {
+    display: block;
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: var(--accent-blue)
+}
+
+.resourse-counter .rate {
+    margin-top: -6px;
+
+    display: block;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--accent-green);
+}
+
+.resourse-counter .tick {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--accent-red);
+}
+
+/* -------------------------------------------------------- */
+
+.producer-list {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: hidden;
+}
+
+.producer-card {
+    height: 50px;
+
+    padding: 10px;
+
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius);
+
+    background-color: var(--bg-card-muted);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.producer-card:hover {
+    cursor: pointer;
+    background-color: var(--bg-card-muted-hover);
+}
+
+.producer-card.active {
+    background-color: var(--bg-card-active);
+}
+
+.producer-card.active:hover {
+    cursor: pointer;
+    background-color: var(--bg-card-active-hover);
+}
+
+.producer-card .title {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.producer-card .count {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.producer-card .info {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.producer-card .cost {
+    font-size: 1rem;
+    color: var(--accent-blue);
+}
+
+.producer-card .rate {
+    font-size: 1rem;
+    font-weight: 200;
+    color: var(--accent-green);
+}
+/* -------------------------------------------------------- */
+

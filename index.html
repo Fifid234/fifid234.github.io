@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>My site</title>
+    <link rel="stylesheet" href="/scr/styles.css">
 </head>
 <body>
-    Hello, World!
+    <div class="app-layout">
+        <aside class="panel menu-panel">
+            <h2>Menu</h2>
+        </aside>
+
+        <main class="panel main-display">
+            <div class="resourse-counter">
+                <span class="value" id="currentEnergy"></span>
+                <span class="rate" id="currentEnergyPerSecond"></span>
+                <span class="tick" id="totalTick"></span>
+            </div>
+            <div class="producer-list" id="producer-list">
+            </div>
+        </main>
+
+    </div>
 </body>
+<script type="module" src="/scr/main.js"></script>
 </html>
